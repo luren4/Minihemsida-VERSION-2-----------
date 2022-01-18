@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }</script>
+
+
+    <div class="navbar" >
+        <div class="space"></div>
+        <nav> 
+                <a href="Player.html">Player</a>
+                <a href="Loot.html">Loot</a>
+                <a href="Enemies.html">Enemies</a>
+                <a href="Combat.html">Combat</a>
+        </nav>
+    </div>
+
+
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+    <div class="buttons" style="height: 10%; text-align: left;">
+        <!-- Next and previous buttons -->
+        <a onloadstart="plusSlides(+1)"></a>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    </div>
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade" style="display: block;">
+      <div class="numbertext">1 / 4</div>
+      <img src="proper_Sword.png" class="slider-image">
+      <div class="text">Weapon</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="proper_armor.png" class="slider-image">
+      <div class="text">Armor</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="One_Ring_Blender_Render.png" class="slider-image">
+      <div class="text">Ring</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="proper-potion.png" class="slider-image" style="padding: 10%;">
+        <div class="text" >Potions</div>
+      </div>
+
+      <div class="buttons" style="height: 10%; text-align: right;">
+        <!-- Next and previous buttons -->
+        <a onloadstart="plusSlides(+1)"></a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+</div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot active" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+  <div class="underbar">
+    <a href="MinihemsidaV2.html"><img src="House.png" alt="Home" style="max-width: auto; height: 70%; margin-top: 5px;"></a> 
+</div>
+ 
+ 
+ 
+</body>
+</html>
